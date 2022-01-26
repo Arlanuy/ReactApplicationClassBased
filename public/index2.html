@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="greeting_div">
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+    <script src="index.js"></script>
+    <script type="text/babel">
+      var Greeting = React.createClass({
+        render:function() {
+          return (
+            <p>Hello, World!</p>
+          )
+        }
+      })
+      ReactDOM.render(<Greeting/>, document.getElementById('greeting_div'))
+      //ReactDOM.render(
+      //  React.createElement('div', null, 'Hello World2!', React.createElement('p', null, "This is awesome!")
+      //), document.getElementById('greeting_div'))
+      
+    </script>
+    <App></App>
+  </body>
+</html>
