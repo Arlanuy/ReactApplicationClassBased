@@ -3,7 +3,7 @@ import React from 'react';
 class Profile extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props.others)
+        console.log(props.metals)
     }
 
     foundProfile() {

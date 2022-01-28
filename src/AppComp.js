@@ -1,21 +1,33 @@
 import React from 'react';
-import Profile from './Profile.js'
+import  Temp from './Temp.js'
 
 class AppComp extends React.Component {
+ 
+
     constructor(props) {
         super(props)
         console.log(this.props)
         console.log(this.props.name)
 
-        this.state = [{"person": "Arlan",
-            career: "Software Engg",
-            love: "Single"}, {"person": "CH",
-            career: "Software Engg",
-            love: "Single"}];
+
     }
 
+    
+    
+    
+
     render() {
-        return <h1>Hello World and  <Profile others ={this.state}></Profile>!!</h1>
+
+        
+
+        return <React.Fragment>
+        {
+            this.props.metals.map((metal) => { 
+                return <li key={metal.name}>{<Temp metal={metal}></Temp>} </li>;
+            })                                                                                                                                                                                                                                       
+        }
+        </React.Fragment>
+
     };
 }
 
