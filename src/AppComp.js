@@ -1,5 +1,5 @@
 import React from 'react';
-import  Temp from './Temp.js'
+import  Metal from './Metal.js'
 
 class AppComp extends React.Component {
  
@@ -22,9 +22,7 @@ class AppComp extends React.Component {
 
         return <React.Fragment>
         {
-            this.props.metals.map((metal) => { 
-                return <li key={metal.name}>{<Temp metal={metal}></Temp>} </li>;
-            })                                                                                                                                                                                                                                       
+            <Metal></Metal>                                                                                                                                                                                                                        
         }
         </React.Fragment>
 

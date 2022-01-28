@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import AppComp from './AppComp.js'
+import AppComp3 from './AppComp3.js'
 
 function App() {
-
+  //for AppComp3
     var mercury = {
       name: "Mercury",
       freezing: -39,
@@ -16,9 +16,10 @@ function App() {
       boiling: 882
   };
   const metals = [mercury, sodium];
+
   return (
     <div className="App">
-      <AppComp metals = {metals}></AppComp>
+      <AppComp3 metals = {metals}></AppComp3>
     </div>
   );
 }
