@@ -27,17 +27,40 @@ function App() {
 
   const metals = [mercury, sodium];
 
+  var letterStyle= {
+    padding: 10,
+    margin: 10,
+    backgroundColor: "#ffde00",
+    color: "#333",
+    display: "inline-block",
+    fontSize: "32",
+    textAlign: "center"
+  };
+
   return (
       <Router>
         <div className="App">
           <h1>Hello baby!</h1>
           <div className="content">
           <h2>This is the content</h2>
-          <li>
-          <Link to="/">Home</Link>
-          <Link to="/metals">Metals</Link>
-          <Link to="/metals2">Metals Details</Link>
-          <Link to="/about">About</Link>          </li>
+          <div>
+           <nav className="navbar navbar-default">
+             <div className="container-fluid">
+                <div classname="navbar-header">
+                  <a className="navbar-brand" href="/home" style={letterStyle}>Metals</a>
+                </div>
+                <div>
+                  <ul>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/metals">Metals</Link></li>
+                    <li><Link to="/metals2">Metals Details</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                  </ul>
+                </div>
+              </div>      
+            </nav>
+          </div>
+          
           <Routes>
             <Route exact path="/"  element={<Home/>}/>
             <Route path="/metals" element={<Metallic/>} />
