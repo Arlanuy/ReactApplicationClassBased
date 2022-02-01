@@ -20,7 +20,7 @@ class Temp extends React.Component {
         console.log(this.state.currentTemp);
     }
                     
-    render () {   
+    render () {    
 
         var stateOfMatter;
           
