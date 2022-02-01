@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import MetalDetail from './MetalDetail.js'
 
 var mercury = {
     name: "Mercury",
@@ -12,44 +14,23 @@ var sodium = {
     boiling: 882
 };
 
-class Metal extends React.Component {
-
-    constructor(props) {
-        super(props);
-        
-        this.state= {
-            currentTemp: null,
-            metals: [mercury, sodium]
-        };
-
-        this.setTemperature = this.setTemperature.bind(this);
-    }
-
-    setTemperature2  = (e) => {
-        this.setState({currentTemp: e.target.value})
-        console.log(this.state.currentTemp);
-    }
-
-    setTemperature(e) {
-        this.setState({currentTemp: e.target.value})
-        console.log(this.state.currentTemp);
-    }
+class Metals extends React.Component {
 
 
 
     render() {
-        return (
-        this.state.metals.map((metal) => { 
-            return <li key={metal.name}>{(<div>
-                <input type="text" value={this.state.currentTemp} onChange={this.setTemperature}></input>
-                <p>{this.state.currentTemp}</p>           
-
-            </div>)} </li>;
-        })    
         
-        )
-            
+       const metals = this.props.data;
+       const metalObj = metals.map((metal) => {
+           return(<div key = {metal.name}><Link to={"/metals2/"+metal.id}>{metal.name}</Link></div>)
+       });
+       
+       return (<div>
+           <h1>Metals Page</h1>
+           {metalObj}
+           
+       </div>)
     }
 }
 
-export default Metal;
+export default Metals;
