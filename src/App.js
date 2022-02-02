@@ -9,6 +9,7 @@ import Home from './Home.js';
 import Metallic from './Metallic.js'
 import Metals from './Metals.js'
 import MetalDetail from './MetalDetail.js'
+import Card from './Card.js'
 
 function App() {
   //for AppComp3
@@ -42,12 +43,14 @@ function App() {
           <NavItem><Link to="/metals">Metals</Link></NavItem>
           <NavItem><Link to="/metals2">Metals Details</Link></NavItem>
           <NavItem><Link to="/about">About</Link></NavItem>
+          <NavItem><Link to="/card">Card</Link></NavItem>
 
 
-        
+
           </div>
           <Routes>
             <Route exact path="/"  element={<Home/>}/>
+            <Route exact path="/card"  element={<Card/>}/>
             <Route path="/metals" element={<Metallic/>} />
             <Route exact path="/metals2" element={<Metals data={data}/>} />
             <Route exact path="/metals2/:id" element={<MetalDetail data={data}/>} />
