@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import AppComp4 from './AppComp4.js'
+import {Nav, Navbar, NavItem} from 'react-bootstrap';
 
-import {BrowserRouter as Router, Route, Routes, Link, Nav} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import About from './About.js';
 import Home from './Home.js';
 import Metallic from './Metallic.js'
@@ -33,11 +34,18 @@ function App() {
           <h1>Hello baby!</h1>
           <div className="content">
           <h2>This is the content</h2>
-          <li>
+          <div>
+
+
           <Link to="/">Home</Link>
-          <Link to="/metals">Metals</Link>
-          <Link to="/metals2">Metals Details</Link>
-          <Link to="/about">About</Link>          </li>
+
+          <NavItem><Link to="/metals">Metals</Link></NavItem>
+          <NavItem><Link to="/metals2">Metals Details</Link></NavItem>
+          <NavItem><Link to="/about">About</Link></NavItem>
+
+
+        
+          </div>
           <Routes>
             <Route exact path="/"  element={<Home/>}/>
             <Route path="/metals" element={<Metallic/>} />
