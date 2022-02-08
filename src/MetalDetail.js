@@ -39,7 +39,7 @@ class MetalDetail extends React.Component {
         
         const metal = metals.filter(metal => {
             console.log("metal neutral is is " + JSON.stringify(metal))
-            if (metal.id == this.state.id) {
+            if (metal.id ==  this.state.id) {
                 return metal;
             }
         });

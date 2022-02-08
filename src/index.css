@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.heading {
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: wavy;
+}

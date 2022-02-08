@@ -28,7 +28,7 @@ class Metals extends React.Component {
        return (<div>
            <h1>Metals Page</h1>
            {metalObj}
-           
+           <MetalDetail/>
        </div>)
     }
 }
